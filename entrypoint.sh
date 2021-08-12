@@ -4,4 +4,6 @@ set -eu
 
 export GITHUB="true"
 
-sh -c "/bin/drone-ssh $*"
+output=$(sh -c "/bin/drone-ssh $*")
+
+echo "::set-output name=output::$output"

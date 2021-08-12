@@ -68,6 +68,9 @@ inputs:
   debug:
     description: 'enable debug mode'
     default: false
+outputs:
+  output:
+    description: 'Output of commands'
 runs:
   using: 'docker'
   image: 'Dockerfile'

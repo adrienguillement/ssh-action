@@ -58,6 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
+      id: who
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -67,17 +68,7 @@ jobs:
         script: whoami
 ```
 
-output:
-
-```sh
-======CMD======
-whoami
-======END======
-out: ***
-==============================================
-✅ Successfully executed commands to all host.
-==============================================
-```
+output will be available at : `${{ steps.who.outputs.output }}`
 
 ### Setting up a SSH Key
 

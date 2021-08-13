@@ -6,7 +6,6 @@ export GITHUB="true"
 
 output=$(sh -c "/bin/drone-ssh $*")
 
-
 echo $output
 
 output="${output//'%'/'%25'}"

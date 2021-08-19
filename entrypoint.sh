@@ -8,7 +8,8 @@ sh -c "/bin/drone-ssh $*"
 
 output=$(sh -c "/bin/drone-ssh $*")
 
-#echo "$output"
+echo "$output"
+echo $output
 
 output="${output//'%'/'%25'}"
 output="${output//$'\n'/'%0A'}"

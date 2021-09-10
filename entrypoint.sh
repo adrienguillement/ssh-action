@@ -5,7 +5,7 @@ set -eu
 export GITHUB="true"
 
 
-LOGFILE=$(echo `sh -c "/bin/drone-ssh $*"`)
+LOGFILE=$(echo "`sh -c \"/bin/drone-ssh $*\""`)
 
 echo "$LOGFILE"
 #cat "$LOGFILE"

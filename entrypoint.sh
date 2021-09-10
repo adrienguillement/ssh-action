@@ -7,7 +7,7 @@ export GITHUB="true"
 
 output=$(sh -c "/bin/drone-ssh $* 2>&1" 2>&1)
 
-echo "$output 2>&1"
+echo "$output"
 
 output="${output//'%'/'%25'}"
 output="${output//$'\n'/'%0A'}"

@@ -9,6 +9,10 @@ LOGFILE="hello.txt"
 sh -c "/bin/drone-ssh $*" >> $LOGFILE
 
 cat "$LOGFILE"
+cat "$LOGFILE"
+cat "$LOGFILE"
+cat "$LOGFILE"
+cat "$LOGFILE"
 
 output="${LOGFILE//'%'/'%25'}"
 output="${LOGFILE//$'\n'/'%0A'}"

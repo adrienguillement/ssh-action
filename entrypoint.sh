@@ -4,12 +4,10 @@ set -eu
 
 export GITHUB="true"
 
-LOGFILE="hello.txt"
 
-echo `sh -c "/bin/drone-ssh $*"`
+LOGFILE=$(echo `sh -c "/bin/drone-ssh $*"`)
 
 cat "$LOGFILE"
-#cat "$LOGFILE"
 #cat "$LOGFILE"
 #cat "$LOGFILE"
 #cat "$LOGFILE"

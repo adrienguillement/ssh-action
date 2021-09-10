@@ -5,9 +5,9 @@ set -eu
 export GITHUB="true"
 
 
-output=$(sh -c "/bin/drone-ssh $*")
+output=$(sh -c "/bin/drone-ssh $* 2>&1" 2>&1)
 
-echo "$output"
+echo "$output 2>&1"
 
 output="${output//'%'/'%25'}"
 output="${output//$'\n'/'%0A'}"

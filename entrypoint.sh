@@ -4,13 +4,14 @@ set -eu
 
 export GITHUB="true"
 
+LOGFILE = "hello"
 
-output=`sh -c "/bin/drone-ssh $*"`
+sh -c "/bin/drone-ssh $*" >> $LOGFILE
 
-echo "$output"
+cat "$LOGFILE"
 
-output="${output//'%'/'%25'}"
-output="${output//$'\n'/'%0A'}"
-output="${output//$'\r'/'%0D'}"
+output="${LOGFILE//'%'/'%25'}"
+output="${LOGFILE//$'\n'/'%0A'}"
+output="${LOGFILE//$'\r'/'%0D'}"
 
-echo "::set-output name=output::$output"
+echo "::set-output name=output::$LOGFILE"

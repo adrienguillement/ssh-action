@@ -4,7 +4,9 @@ set -eu
 
 export GITHUB="true"
 
-output=$(bash -c "/bin/drone-ssh $* 2>&1" 2>&1)
+sh -c "/bin/drone-ssh $*"
+
+output=$(bash -c "/bin/drone-ssh $*" 2>&1)
 
 echo "$output"
 

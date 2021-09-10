@@ -7,7 +7,6 @@ export GITHUB="true"
 
 LOGFILE=echo `sh -c "/bin/drone-ssh $*"`
 
-echo "$LOGFILE"
 #cat "$LOGFILE"
 #cat "$LOGFILE"
 #cat "$LOGFILE"

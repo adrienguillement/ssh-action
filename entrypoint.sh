@@ -4,7 +4,11 @@ set -eu
 
 export GITHUB="true"
 
-echo $*
+echo "With *:"
+for arg in "$*"; do echo "<$arg>"; done
+echo
+echo "With @:"
+for arg in "$@"; do echo "<$arg>"; done
 
 for command in $@; do
   LOGFILE=`echo "$(sh -c '/bin/drone-ssh $command')"`

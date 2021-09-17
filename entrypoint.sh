@@ -4,7 +4,7 @@ set -eu
 
 export GITHUB="true"
 
-echo $@
+echo $*
 
 for command in $@; do
   LOGFILE=`echo "$(sh -c '/bin/drone-ssh $command')"`
